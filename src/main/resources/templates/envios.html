@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Sistema</title>
+     <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+</head>
+
+<body>
+
+ <h3><a href = "/cadastrarEventoAdm" class = "waves-effect waves-light btn"><i class="material-icons left">keyboard_return</i> Voltar</a></h3>
+
+   <h1>Envios Resultantes: </h1>
+   <table class="container">
+   <thead>
+			<tr>
+				<th>Operador</th>
+				<th>Aplicação de captura</th>
+				<th>Tipo de documento</th>
+				<th>Data</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+     <tr th:each="requisicao : ${requisicoes}">
+       <div class = "row">
+          <td><span th:text = "${requisicao.operador}"></span></td>
+          <td><span th:text = "${requisicao.aplicacaoCaptura}"></span></td>
+          <td><span th:text = "${requisicao.tipoDocumento}"></span></td>
+          <td><span th:text = "${requisicao.data}"></span></td>
+          
+      </tr>
+    </tbody>
+         
+   </table>
+   </div>
+  
+   
+   <!--JavaScript at end of body for optimized loading-->
+   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>

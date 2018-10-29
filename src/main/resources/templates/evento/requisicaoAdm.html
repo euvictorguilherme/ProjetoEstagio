@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Sistema</title>
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+    <hl>Requisição: </h1>
+    <h3><a href = "/" class = "waves-effect waves-light btn"><i class="material-icons left">keyboard_return</i> Voltar</a></h3>
+    <form class="container" method = "post">
+    
+        <div class="row">
+        <div class = "input-field col s3">
+        Operador: <input type ="text" value="" name = "operador"/>
+        </div>
+        <div class = "input-field col s3">
+        Aplicação de captura:<input type ="text" value="" name = "aplicacaoCaptura"/>
+        </div>
+        <div class = "input-field col s3">
+        Data:<input type ="date" value="" name = "data"/> 
+        </div> 
+        <div class = "input-field col s3">
+        Tipo de arquivo:<input type ="text" value="" name = "tipoDocumento"/>
+        </div> 
+              
+        <button href="/upload" class = "waves-effect waves-light btn" type= "submit">Enviar</button>
+        
+        
+        <h3><a href = "/informacoesRequisicoes" class = "waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i> Info.Requisicões</a></h3>
+        
+     </form>
+     
+     
+   <!--JavaScript at end of body for optimized loading-->
+   <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>
